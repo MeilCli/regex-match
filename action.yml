@@ -1,9 +1,9 @@
-name: 'template name'
-description: 'template description'
+name: 'regex match action'
+description: 'simple provide string.match(regex) action'
 author: 'MeilCli'
 branding:
-  icon: package
-  color: gray-dark
+  icon: eye
+  color: green
 inputs:
   regex_pattern:
     description: 'search regex pattern'
