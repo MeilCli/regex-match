@@ -121,10 +121,33 @@ var core = __importStar(__webpack_require__(470));
 var option_1 = __webpack_require__(618);
 function run() {
     return __awaiter(this, void 0, void 0, function () {
-        var option;
+        var option, regex, match;
         return __generator(this, function (_a) {
             try {
                 option = option_1.getOption();
+                regex = void 0;
+                if (option.regexOption == null) {
+                    regex = new RegExp(option.regexPattern);
+                }
+                else {
+                    regex = new RegExp(option.regexPattern, option.regexOption);
+                }
+                match = option.seachString.match(regex);
+                if (match != null) {
+                    core.setOutput("matched", "true");
+                    core.setOutput("matched_first", match[0]);
+                    core.setOutput("matched_json", JSON.stringify(match));
+                    if (match.index != undefined) {
+                        core.setOutput("matched_has_index", "true");
+                        core.setOutput("matched_index", "" + match.index);
+                    }
+                    else {
+                        core.setOutput("matched_has_index", "false");
+                    }
+                }
+                else {
+                    core.setOutput("matched", "false");
+                }
             }
             catch (error) {
                 core.setFailed(error.message);
@@ -495,8 +518,9 @@ exports.getOption = void 0;
 var core = __importStar(__webpack_require__(470));
 function getOption() {
     return {
-        test: getInput("test"),
-        testOrNull: getInputOrNull("test_or_null"),
+        regexPattern: getInput("regex_pattern"),
+        regexOption: getInputOrNull("regex_option"),
+        seachString: getInput("search_string"),
     };
 }
 exports.getOption = getOption;
