@@ -1,5 +1,5 @@
-# action-template
-This repository is my GitHub Action Repository template
+# regex-match
+regex match action
 
 ## License
 MIT License
