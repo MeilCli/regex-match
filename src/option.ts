@@ -1,14 +1,16 @@
 import * as core from "@actions/core";
 
 export interface Option {
-    test: string;
-    testOrNull: string | null;
+    regexPattern: string;
+    regexOption: string | null;
+    seachString: string;
 }
 
 export function getOption(): Option {
     return {
-        test: getInput("test"),
-        testOrNull: getInputOrNull("test_or_null"),
+        regexPattern: getInput("regex_pattern"),
+        regexOption: getInputOrNull("regex_option"),
+        seachString: getInput("search_string"),
     };
 }
 

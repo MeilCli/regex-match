@@ -4,6 +4,26 @@ author: 'MeilCli'
 branding:
   icon: package
   color: gray-dark
+inputs:
+  regex_pattern:
+    description: 'search regex pattern'
+    required: true
+  regex_option:
+    description: 'search regex option'
+  search_string:
+    description: 'searched string'
+    required: true
+outputs:
+  matched:
+    description: 'matched: true or false'
+  matched_first:
+    description: 'matched first string'
+  matched_json:
+    description: 'matched result json, attension: will not inculde index property'
+  matched_has_index:
+    description: 'has provided matched index'
+  matched_index:
+    description: 'matched index'
 runs:
   using: 'node12'
   main: 'dist/index.js'
