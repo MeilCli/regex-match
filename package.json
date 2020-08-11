@@ -1,5 +1,5 @@
 {
-    "name": "regex-match",
+    "name": "regex-match-action",
     "version": "1.0.0",
     "description": "",
     "main": "lib/main.js",
