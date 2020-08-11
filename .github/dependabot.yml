@@ -8,4 +8,4 @@ updates:
       - 'MeilCli'
     labels:
       - 'Dependencies'
-    open-pull-requests-limit: 20
+    open-pull-requests-limit: 20 
