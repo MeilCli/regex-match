@@ -25,6 +25,9 @@ regex match action
 - `matched_index`
   - matched index
 
+## Contributing
+see [Contributing.md](./.github/CONTRIBUTING.md)
+
 ## License
 MIT License
 
