@@ -25,7 +25,9 @@ async function run() {
             core.setOutput("matched", "false");
         }
     } catch (error) {
-        core.setFailed(error.message);
+        if (error instanceof Error) {
+            core.setFailed(error.message);
+        }
     }
 }
 
