@@ -1,4 +1,5 @@
 # regex-match
+[![CI-Master](https://github.com/MeilCli/regex-match/actions/workflows/ci-master.yml/badge.svg)](https://github.com/MeilCli/regex-match/actions/workflows/ci-master.yml)  
 regex match action
 
 ## Input
