@@ -25,5 +25,5 @@ outputs:
   matched_index:
     description: 'matched index'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
