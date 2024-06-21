@@ -99,7 +99,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.getOption = void 0;
+exports.getOption = getOption;
 const core = __importStar(__nccwpck_require__(186));
 function getOption() {
     return {
@@ -108,7 +108,6 @@ function getOption() {
         seachString: getInput("search_string"),
     };
 }
-exports.getOption = getOption;
 function getInput(key) {
     return core.getInput(key, { required: true });
 }
