@@ -1,5 +1,5 @@
 import * as core from "@actions/core";
-import { getOption } from "./option";
+import { getOption } from "./option.js";
 
 async function run() {
     try {
